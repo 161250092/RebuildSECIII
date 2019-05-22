@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head"></head>
+<title>编辑任务</title>
+</head>
+
+<body>
+
+<div id="app">
+    <div th:replace="publisher/common/guide"></div>
+    <p>{{information}}</p>
+
+</div>
+
+
+
+</body>
+<div th:replace="publisher/common/js"></div>
+<script type="text/javascript" th:src="@{../../js/publisher/editorTask.js}"></script>
+</html>
