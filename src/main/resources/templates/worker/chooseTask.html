@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head">
+    <title>众包标注系统</title>
+</head>
+<body>
+<div id="app">
+    <div th:replace="worker/common/guide"></div>
+    <p> {{information}}</p>
+</div>
+</body>
+<div th:replace="worker/common/js"></div>
+<script type="text/javascript" th:src="@{../../js/worker/chooseTask.js}"></script>
+</html>
