@@ -1,5 +1,22 @@
-<el-menu mode="horizontal" :default-active="activeIndex">
-    <el-menu-item index="0" id="logo">任务</el-menu-item>
-    <el-menu-item index="1"><a href="/worker/history"></a>历史记录</el-menu-item>
-    <el-menu-item index="2"><a href="/worker/profile">个人信息</a></el-menu-item>
-</el-menu>
+<div>
+    <el-row type="flex" justify="center" class="info-row">
+        <el-col :span="10"><p>工人ID：{{worker.ID}}</p></el-col>
+        <el-col :span="10"><p>账户余额：{{worker.cash}}</p></el-col>
+        <el-col :span="10"><p>声望：{{worker.prestige}}</p></el-col>
+        <el-col :span="5"><p>你好，{{worker.name}}</p></el-col>
+        <el-col :span="1"><p>|</p></el-col>
+        <el-col :span="2"><p><a href="/">登出</a></p></el-col>
+    </el-row>
+    <el-menu mode="horizontal" :default-active="menuIndex">
+        <el-menu-item index="99">
+            <img src="../../../static/img/logo.jpg" alt="众包标注" height="50" width="100"/>
+        </el-menu-item>
+        <el-menu-item index="0" id="logo">任务</el-menu-item>
+        <el-menu-item index="1"><a href="/worker/history"></a>历史记录</el-menu-item>
+        <el-menu-item index="2"><a href="/worker/profile"></a>个人信息</el-menu-item>
+    </el-menu>
+    <el-menu mode="horizontal" :default-active="subMenuIndex">
+        <el-menu-item index="0">所有任务</el-menu-item>
+        <el-menu-item index="1">你的任务</el-menu-item>
+    </el-menu>
+</div>
